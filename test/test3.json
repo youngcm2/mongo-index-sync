@@ -1,0 +1,35 @@
+{
+  "collection1": [
+    {
+      "fields": {
+        "fieldA": 1,
+        "fieldB": -1,
+        "fieldC": 1
+      },
+      "options": {
+        "name": "field_A_B_C"
+      }
+    },
+    {
+      "fields": {
+        "fieldB": 1,
+        "fieldZ": 1
+      },
+      "options": {
+        "unique": true,
+        "name": "unique_B_Z"
+      }
+    }
+  ],
+  "collection2": [
+    {
+      "fields": {
+        "lastChangeDate": -1
+      },
+      "options": {
+        "sparse": true,
+        "name": "last_changed"
+      }
+    }
+  ]
+}

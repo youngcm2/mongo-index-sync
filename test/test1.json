@@ -1,0 +1,14 @@
+{
+  "organizations": [
+    {
+      "fields": {
+        "domains": 1
+      },
+      "options": {
+        "unique": true,
+        "sparse": false,
+        "name": "domains"
+      }
+    }
+  ]
+}

@@ -1,20 +1,18 @@
 {
   "name": "mongo-index-sync",
-  "version": "0.0.0",
-  "description": "Update a live MongoDB database's indexes based on files in source control",
-  "main": "lib/sync.js",
+  "version": "1.0.0",
+  "description": "Update a live MongoDB database's indexes based on files in source control. This was inspired from ",
+  "main": "src/sync.js",
   "bin": {
-    "mongo-index-sync": "bin/cli.js"
+    "mongo-index-sync": "src/index.js"
   },
   "scripts": {
-    "test": "vows"
-  },
-  "engines" : {
-    "node" : ">=0.10"
+    "test": "vows",
+    "package": "pkg src/index.js --output 'bin/mongo-index-sync' --targets win,linux,macos"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/brandonramirez/mongo-index-sync.git"
+    "url": "git://github.com/architectnow/mongo-index-sync.git"
   },
   "keywords": [
     "mongodb",
@@ -25,20 +23,22 @@
     "schema",
     "deploy"
   ],
-  "author": "Brandon Ramirez",
+  "author": "Chris Young",
   "license": "Apache v2",
   "bugs": {
-    "url": "https://github.com/brandonramirez/mongo-index-sync/issues"
+    "url": "https://github.com/architectnow/mongo-index-sync/issues"
   },
-  "homepage": "https://github.com/brandonramirez/mongo-index-sync",
+  "homepage": "https://github.com/architectnow/mongo-index-sync",
   "dependencies": {
-    "async": "^0.9.0",
-    "extend": "^1.2.1",
-    "mongodb": "^1.4.4",
-    "nomnom": "^1.6.2",
-    "underscore": "^1.6.0"
+    "async": "3.0.1-0",
+    "commander": "2.19.0",
+    "extend": "3.0.2",
+    "mongodb": "3.1.9",
+    "mongoist": "https://github.com/saintedlama/mongoist.git",
+    "mz": "2.7.0",
+    "underscore": "1.9.1"
   },
   "devDependencies": {
-    "vows": "^0.7.0"
+    "vows": "0.8.2"
   }
 }
