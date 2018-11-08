@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/brandonramirez/mongo-index-sync.svg)](https://travis-ci.org/brandonramirez/mongo-index-sync)
+[![Build Status](https://travis-ci.org/brandonramirez/mongo-indexes.svg)](https://travis-ci.org/brandonramirez/mongo-indexes)
 
-mongo-index-sync
+mongo-indexes
 ================
 
 Update a live MongoDB database's indexes based on files in source control
@@ -19,12 +19,12 @@ it is important to know that they will each enter the desired state regardless o
 Installing as a library / dependency
 ------------------------------------
 
-    $ npm install mongo-index-sync
+    $ npm install mongo-indexes
 
 Installing as a command-line program
 ------------------------------------
 
-    $ [sudo] npm install -g mongo-index-sync
+    $ [sudo] npm install -g mongo-indexes
 
 Sudo may be needed if you are running `npm install` as a non-root user.
 
@@ -34,7 +34,7 @@ Using as a library
 The module itself returns a function which accepts a set of properties and returns a function that actually performs the sync.  The
 final function accepts a callback function which will be invoked upon completion or as soon as an error occurs.
 
-    var mongoIndexSync = require('mongo-index-sync')({
+    var mongoIndexSync = require('mongo-indexes')({
       file: '/path/to/indexes.js',
       host: 'localhost',
       database: 'dev_db',
@@ -72,7 +72,7 @@ to keep your databases fully in sync.
 Using as a program
 ------------------
 
-    $ mongo-index-sync-osx --database dev_db --file /path/to/indexes.js --dry
+    $ mongo-indexes -u mongodb://localhost:27017/dev_db --file /path/to/indexes.js --dry
 
 Command-line usage:
 
