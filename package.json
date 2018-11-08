@@ -1,18 +1,18 @@
 {
-  "name": "mongo-index-sync",
-  "version": "1.0.0",
-  "description": "Update a live MongoDB database's indexes based on files in source control. This was inspired from ",
+  "name": "mongo-indexes",
+  "version": "2.0.0",
+  "description": "Update a live MongoDB database's indexes based on files in source control. This was inspired from https://github.com/brandonramirez/mongo-index-sync",
   "main": "src/sync.js",
   "bin": {
-    "mongo-index-sync": "src/index.js"
+    "mongo-indexes": "src/index.js"
   },
   "scripts": {
     "test": "vows",
-    "package": "pkg src/index.js --output 'bin/mongo-index-sync' --targets win,linux,macos"
+    "package": "pkg src/index.js --output 'bin/mongo-indexes' --targets win,linux,macos"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/architectnow/mongo-index-sync.git"
+    "url": "git://github.com/youngcm2/mongo-indexes.git"
   },
   "keywords": [
     "mongodb",
@@ -24,11 +24,11 @@
     "deploy"
   ],
   "author": "Chris Young",
-  "license": "Apache v2",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/architectnow/mongo-index-sync/issues"
+    "url": "https://github.com/youngcm2/mongo-indexes/issues"
   },
-  "homepage": "https://github.com/architectnow/mongo-index-sync",
+  "homepage": "https://github.com/youngcm2/mongo-indexes",
   "dependencies": {
     "async": "3.0.1-0",
     "commander": "2.19.0",
