@@ -72,19 +72,34 @@ to keep your databases fully in sync.
 Using as a program
 ------------------
 
-    $ mongo-index-sync --database dev_db --file /path/to/indexes.js --dry
+    $ mongo-index-sync-osx --database dev_db --file /path/to/indexes.js --dry
 
 Command-line usage:
 
-    Usage: mongo-index-sync [options]
-
+    Usage: index [options] [command]
+    
     Options:
-       -f, --file       Path to file which contains db.collection.ensureIndex calls
-       -h, --host       Hostname or IP address of MongoDB  [localhost]
-       -p, --port       TCP port number MongoDB is listening on  [27017]
-       -d, --database   Which database to sync indexes
-       -u, --username   Username to authenticate as to MongoDB
-       -P, --password   Password for the authentication user
-       --drop           Whether to drop indexes in the live database which do not exist in the file (default is to not drop).  [false]
-       --dry            Only describe what changes would be made without actually applying them  [false]
+      -u, --url <url>            Connection URL of MongoDB
+      -d, --database <database>  Which database to sync indexes
+      -h, --help                 output usage information
+    
+    Commands:
+      backup [options]
+      sync [options]
+      
+    Usage: sync [options]
+    
+    Options:
+      --drop             Whether to drop indexes in the live database which do not exist in the file (default is to not drop).
+      --dry              Only describe what changes would be made without actually applying them
+      -f, --file <file>  Path to file which contains db.collection.ensureIndex calls
+      -h, --help         output usage information
+    
+    Usage: backup [options]
+    
+    Options:
+      -f, --file <file>  Path to file to backup indexes
+      -h, --help         output usage information    
+      
+  
     
